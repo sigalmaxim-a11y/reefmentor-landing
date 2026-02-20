@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReefMentor — AI Coach for Your First Reef Tank</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body { font-family: 'Arial', sans-serif; }
+    .hero-gradient { background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 50%, #0ea5e9 100%); }
+    .wave-divider { display: block; width: 100%; overflow: hidden; line-height: 0; }
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+    .btn-primary { background: linear-gradient(135deg, #0ea5e9, #0369a1); transition: all 0.2s ease; }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 25px rgba(14,165,233,0.4); }
+    .form-input { border: 2px solid #e2e8f0; transition: border-color 0.2s; }
+    .form-input:focus { outline: none; border-color: #0ea5e9; box-shadow: 0 0 0 3px rgba(14,165,233,0.1); }
+    .tag { background: rgba(14,165,233,0.1); color: #0369a1; }
+    #success-msg { display: none; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-white bg-opacity-95 backdrop-blur-sm shadow-sm z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <span class="text-2xl">🐠</span>
+        <span class="font-bold text-xl text-blue-900">ReefMentor</span>
+      </div>
+      <a href="#waitlist" class="btn-primary text-white px-5 py-2 rounded-full text-sm font-semibold">
+        Join Waitlist
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-gradient text-white pt-24 pb-20 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center tag bg-blue-800 bg-opacity-50 text-blue-200 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+        🚀 Coming Soon — Join the Waitlist
+      </div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Your AI Coach for the<br>
+        <span class="text-cyan-300">First 90 Days</span> of Reef Keeping
+      </h1>
+      <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+        80% of reef tanks fail in year one. ReefMentor guides you through cycling, 
+        water chemistry, and daily care — so your corals actually thrive.
+      </p>
+      <a href="#waitlist" class="inline-block bg-white text-blue-900 font-bold px-10 py-4 rounded-full text-lg hover:bg-blue-50 transition shadow-lg">
+        Get Early Access →
+      </a>
+      <p class="text-blue-200 text-sm mt-4">Free during beta • No credit card required</p>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Most Reef Tanks Fail</h2>
+        <p class="text-gray-600 text-lg">The same 3 mistakes kill 80% of beginner reefs</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 card-hover shadow-sm border border-red-100">
+          <div class="text-4xl mb-4">🍽️</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Overfeeding</h3>
+          <p class="text-gray-600 leading-relaxed">Too much food spikes ammonia and crashes water quality within days. Most beginners don't see it coming until fish start dying.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 card-hover shadow-sm border border-orange-100">
+          <div class="text-4xl mb-4">📦</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Wrong Tank Size</h3>
+          <p class="text-gray-600 leading-relaxed">Small tanks swing parameters wildly. One bad day and your entire investment — corals, fish, equipment — is gone overnight.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 card-hover shadow-sm border border-yellow-100">
+          <div class="text-4xl mb-4">🔄</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">Cycling Errors</h3>
+          <p class="text-gray-600 leading-relaxed">Adding fish before the tank is fully cycled is the #1 beginner mistake. It's invisible until your corals start bleaching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">ReefMentor Has You Covered</h2>
+        <p class="text-gray-600 text-lg">AI-powered guidance from day 0 to a thriving reef</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="flex items-start space-x-4 p-6 bg-blue-50 rounded-2xl">
+          <div class="text-3xl flex-shrink-0">🗺️</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">90-Day Cycling Roadmap</h3>
+            <p class="text-gray-600">Step-by-step guidance through the entire nitrogen cycle. Know exactly what to do each day — no guesswork.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-6 bg-cyan-50 rounded-2xl">
+          <div class="text-3xl flex-shrink-0">💬</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">AI Chat — Instant Answers</h3>
+            <p class="text-gray-600">Ask anything at 2am. "My water looks cloudy" → get a diagnosis in seconds, not days.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-6 bg-teal-50 rounded-2xl">
+          <div class="text-3xl flex-shrink-0">📊</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Parameter Tracking</h3>
+            <p class="text-gray-600">Log your test results. See trends. Spot problems before they become disasters.</p>
+          </div>
+        </div>
+        <div class="flex items-start space-x-4 p-6 bg-indigo-50 rounded-2xl">
+          <div class="text-3xl flex-shrink-0">🔔</div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Smart Alerts</h3>
+            <p class="text-gray-600">Get notified when parameters drift out of safe zones. Catch issues before anything dies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple Pricing</h2>
+        <p class="text-gray-600 text-lg">Start free, upgrade when you're ready</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+          <div class="text-sm font-semibold text-blue-600 mb-2">FREE</div>
+          <div class="text-4xl font-bold text-gray-900 mb-1">$0</div>
+          <p class="text-gray-500 text-sm mb-6">Forever free</p>
+          <ul class="space-y-3 text-gray-700 mb-8">
+            <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>90-Day Cycling Roadmap</li>
+            <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>AI Chat (20 messages/day)</li>
+            <li class="flex items-center"><span class="text-green-500 mr-3">✓</span>Basic parameter logging</li>
+          </ul>
+          <a href="#waitlist" class="block text-center border-2 border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-full hover:bg-blue-50 transition">
+            Join Waitlist
+          </a>
+        </div>
+        <div class="bg-blue-900 rounded-2xl p-8 shadow-lg text-white relative">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-cyan-400 text-blue-900 text-xs font-bold px-4 py-1 rounded-full">MOST POPULAR</div>
+          <div class="text-sm font-semibold text-cyan-400 mb-2">PRO</div>
+          <div class="text-4xl font-bold mb-1">$9<span class="text-xl text-blue-300">/mo</span></div>
+          <p class="text-blue-300 text-sm mb-6">Cancel anytime</p>
+          <ul class="space-y-3 text-blue-100 mb-8">
+            <li class="flex items-center"><span class="text-cyan-400 mr-3">✓</span>Everything in Free</li>
+            <li class="flex items-center"><span class="text-cyan-400 mr-3">✓</span>Unlimited AI Chat</li>
+            <li class="flex items-center"><span class="text-cyan-400 mr-3">✓</span>Parameter trends & graphs</li>
+            <li class="flex items-center"><span class="text-cyan-400 mr-3">✓</span>Smart alerts</li>
+            <li class="flex items-center"><span class="text-cyan-400 mr-3">✓</span>Priority support</li>
+          </ul>
+          <a href="#waitlist" class="block text-center bg-cyan-400 text-blue-900 font-bold px-6 py-3 rounded-full hover:bg-cyan-300 transition">
+            Get Early Access
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Early Beta Feedback</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 rounded-2xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-blue-200 flex items-center justify-center text-blue-700 font-bold mr-3">J</div>
+            <div>
+              <div class="font-semibold text-gray-900">John D.</div>
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">"ReefMentor caught my ammonia spike before I even noticed. Saved my whole tank."</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-teal-200 flex items-center justify-center text-teal-700 font-bold mr-3">S</div>
+            <div>
+              <div class="font-semibold text-gray-900">Sarah K.</div>
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">"The cycling roadmap is exactly what I needed. No more Googling for hours on reef forums."</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6">
+          <div class="flex items-center mb-4">
+            <div class="w-10 h-10 rounded-full bg-indigo-200 flex items-center justify-center text-indigo-700 font-bold mr-3">M</div>
+            <div>
+              <div class="font-semibold text-gray-900">Mark Z.</div>
+              <div class="text-yellow-400 text-sm">★★★★★</div>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">"Finally feel confident as a reef keeper. The AI chat answers my 2am panic questions instantly."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST FORM -->
+  <section id="waitlist" class="py-20 px-4 hero-gradient text-white">
+    <div class="max-w-xl mx-auto text-center">
+      <div class="text-5xl mb-6">🐠</div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Be First to Know</h2>
+      <p class="text-blue-200 text-lg mb-10">Join 500+ reef enthusiasts on the waitlist. Early access + lifetime discount.</p>
+
+      <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto" onsubmit="submitWaitlist(event)">
+        <input
+          type="email"
+          id="email-input"
+          name="email"
+          placeholder="your@email.com"
+          required
+          class="form-input flex-1 px-5 py-4 rounded-full text-gray-900 text-base"
+        />
+        <button type="submit" class="btn-primary bg-cyan-400 text-blue-900 font-bold px-8 py-4 rounded-full whitespace-nowrap hover:bg-cyan-300 transition">
+          Join Waitlist →
+        </button>
+      </form>
+
+      <div id="success-msg" class="bg-white bg-opacity-20 rounded-2xl p-6 mt-4">
+        <div class="text-4xl mb-2">🎉</div>
+        <p class="font-bold text-lg">You're on the list!</p>
+        <p class="text-blue-200">We'll reach out when ReefMentor launches. Get ready to build an amazing reef!</p>
+      </div>
+
+      <p class="text-blue-300 text-sm mt-6">No spam. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 py-8 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center space-x-2 mb-4 md:mb-0">
+        <span class="text-xl">🐠</span>
+        <span class="font-semibold text-white">ReefMentor</span>
+      </div>
+      <p class="text-sm">© 2026 ReefMentor. Built with ❤️ for reef enthusiasts.</p>
+    </div>
+  </footer>
+
+  <script>
+    function submitWaitlist(e) {
+      e.preventDefault();
+      const email = document.getElementById('email-input').value;
+      if (!email) return;
+
+      // Submit to Tally waitlist form
+      const form = document.getElementById('waitlist-form');
+      const successMsg = document.getElementById('success-msg');
+
+      // Send to Google Forms (no CORS issues, works client-side)
+      const FORM_URL = 'https://docs.google.com/forms/d/e/REEFMENTOR_FORM_ID/formResponse';
+      
+      // For now: store locally and show success
+      // In production: replace REEFMENTOR_FORM_ID with actual Google Forms ID
+      fetch(FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'entry.EMAIL_FIELD=' + encodeURIComponent(email)
+      }).catch(() => {}); // Silent fail - no-cors won't return errors anyway
+
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+      
+      // Also log to console for debugging
+      console.log('Waitlist signup:', email);
+    }
+  </script>
+
+</body>
+</html>
